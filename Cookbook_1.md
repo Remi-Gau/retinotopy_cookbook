@@ -12,13 +12,13 @@ Needs a 2GHz processor or better with 2Gb of RAM and 2.3Gb free disk space. Has 
 
 Go to the [freesurfer wiki](http://surfer.nmr.mgh.harvard.edu/fswiki) and download the current stable version from the ‘Software’ section. Installation instructions are [here](http://surfer.nmr.mgh.harvard.edu/fswiki/MacOsInstall).
 
-Recommended install location is in `/usr/local/freesurfer`. This can be tricky to get to in the Finder, so suggest opening your hard drive from the Finder after installation. Then menu Go->GoToFolder and type in `/usr/local/freesurfer`. This will go to that folder; then menu File->AddToSidebar will add an alias to freesurfer in the side bar.
+Recommended install location is in `/usr/local/freesurfer`. This can be tricky to get to in the Finder, so suggest opening your hard drive from the Finder after installation. Then menu `Go --> GoToFolder` and type in `/usr/local/freesurfer`. This will go to that folder; then menu `File --> AddToSidebar` will add an alias to freesurfer in the side bar.
 
-Drag Application->Terminal into the Dock if you haven’t already. Setup and configuration is [here](http://surfer.nmr.mgh.harvard.edu/fswiki/SetupConfiguration). This basically involves configuring some environment variables and then running the csh script `SetUpFreeSurfer`
+Drag `Application --> Terminal` into the Dock if you haven’t already. Setup and configuration is [here](http://surfer.nmr.mgh.harvard.edu/fswiki/SetupConfiguration). This basically involves configuring some environment variables and then running the csh script `SetUpFreeSurfer`
 
 Test the installation by typing `tkmedit bert orig.mgz`. This should open an MRI scan.
 
-You are going to get annoyed setting the path `etc` every time you fire up a terminal window so set default tsch in the terminal Preferences menu. Then open a text editor (e.g. pico) and create a text file containing
+You are going to get annoyed setting the path `etc` every time you fire up a terminal window so set default `tsch` in the terminal Preferences menu. Then open a text editor (e.g. pico) and create a text file containing
 
 ```bash
 setenv FREESURFER_HOME /usr/local/freesurfer
@@ -29,7 +29,7 @@ and save this in `/Users/YourUserName` as a file named .csrhc.
 
 For the new data you want to process, create a directory in `/usr/local/freesurfer/subjects` named `001` (all subject-specific data must be in named directories at this place in the directory tree for freesurfer to find it) and in a subdirectory called `./mri` put the images.
 
-Cookbook 2 tells you how to do the first reconstruction
+[Cookbook 2](Cookbook_2.md) tells you how to do the first reconstruction
 
 ## For Linux
 

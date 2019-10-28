@@ -5,7 +5,7 @@ Geraint Rees (g.rees@fil.ion.ucl.ac.uk)
 
 [Cookbook 1](Cookbook_1.md)	is about installing Freesufer
 
-Cookbook 2 	is about how to get FIL structurals segmented and surfaces created by Freesurfer
+[Cookbook 2](Cookbook_2.md) 	is about how to get FIL structurals segmented and surfaces created by Freesurfer
 
 Cookbook 3	is about how to inspect Freesurfer output tools and a brief introduction to the editing tools
 

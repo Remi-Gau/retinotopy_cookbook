@@ -3,7 +3,7 @@
 Version 1.0, March 2008
 Geraint Rees (g.rees@fil.ion.ucl.ac.uk)
 
-Cookbook 1	is about installing Freesufer
+[Cookbook 1](Cookbook_1.md)	is about installing Freesufer
 
 Cookbook 2 	is about how to get FIL structurals segmented and surfaces created by Freesurfer
 

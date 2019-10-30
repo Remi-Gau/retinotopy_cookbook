@@ -8,7 +8,7 @@ The Cookbook assumes there are going to be two basic circumstances when making a
 
 1.  The automatic cortical parcellation produces annotations that can be converted into labels (a label is a set of surface vertices forming an ROI: see point 5 below under ‘Flattening, overlays and retinotopy’). Use for example:
 
-```
+```bash
 mri_annotation2label --subject 002 \
                      --hemi lh \
                      --outdir ./trial_labels
@@ -18,7 +18,7 @@ to take subject `002` and create a whole load of labels in a subdirectory of tha
 
 2.  The new labels you have created are anatomical ROIs defined in surface coordinates. You can visualise them by starting `tksurfer` e.g.
 
-```
+```bash
 tksurfer 002 lh inflated
 ```
 
@@ -28,13 +28,13 @@ In the subject directory there is a subdirectory `./label` that contains a file 
 
 3.  To make one or more of the labels (collection of surface points) into an ROI (three dimensional structure) you need to use `mri_label2vol`. Try reading the help first
 
-```
+```bash
 mri_label2vol --help
 ```
 
 You then need a command like
 
-```
+```bash
 mri_label2vol --label ./trial_labels/lh.corpuscallosum.label \
               --temp ./stats/spmT_0003.img \
               --reg stats/register.dat \
@@ -46,7 +46,7 @@ Here the variable stuff if the path after `--label` (I’m trying to create an R
 
 4.  The final step is to use `mri_convert` to take the bshort images and make an image. In this worked example use
 
-```
+```bash
 mri_convert cent_lh_000.bshort.hdr callosum.img
 ```
 
@@ -58,7 +58,7 @@ mri_convert cent_lh_000.bshort.hdr callosum.img
 
 2.  Keep going with the tutorial and you should save the patch you create using `File --> Patch --> Save Patch As`. At this point everything is still in 3d. Now you need to flatten by using
 
-```
+```bash
 mris_flatten -w 10 lh.occip.patch.3d lh.occip.flat.patch.3d
 ```
 
@@ -66,7 +66,7 @@ Again, `mris_flatten --help` is very helpful and replace the input and output fi
 
 3.  Now you should have a flat patch. This is just a surface like all the other surfaces (pial, inflated) you have been playing with and so you can visualise it in tksurfer, overlay stuff on it and so on in exactly the same way. Start by visualising the patch overlaid with your stats (e.g. meridians) like this
 
-```
+```bash
 tksurfer 002 lh inflated \
         -patch lh.patch_flat \
         -overlay ./stats/spmT_0003.img
@@ -82,7 +82,7 @@ In this example the subject ID is `002`, the flattened bit of left occipital lob
 
 7.  Now you need to convert the label (collection of vertices on a surface) to a volume (something that can be visualised in tkmedit or exported to SPM). This uses the command mri_label2vol. Issue a command like
 
-```
+```bash
 mri_label2vol \
   --label ./label/test_yellow.label \
   --temp ./stats/spmT_0003.img \
@@ -95,7 +95,7 @@ Again, `mri_label2vol --help` is very helpful. In this command we’re specifyin
 
 8.  This produces a whole load of files with a .bshort.hdr and .bshort images which presumably is something to do with the images. You can visualise the images that have been produced with something like
 
-```
+```bash
 tkmedit 002 orig.mgz \
   -overlay ./test_yellow.bshort.bhdr \
   -overlay-reg ./stats/register.dat
@@ -107,7 +107,7 @@ In this example the subject is `002`, `orig.mgz` is the original T1 file and the
 
 9.  The final step is to use mri_convert to take the bshort images and make an Analyze format image. In this worked example use
 
-```
+```bash
 mri_convert test_yellow.bshort.bhdr test_yellow.img
 ```
 

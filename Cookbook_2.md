@@ -10,7 +10,7 @@ This cookbook assumes you have installed Freesurfer. If you haven’t, follow [c
 
 4.  Convert your structural into .mgz format. In a terminal window issue
 
-```
+```bash
 mri_convert rAD.nii 001.mgz
 ```
 
@@ -18,7 +18,7 @@ mri_convert rAD.nii 001.mgz
 
 5.  Now you can reconstruct! The super-lazy way is to do all steps at once by typing
 
-```
+```bash
 recon-all –autorecon-all –subject 001
 ```
 
@@ -31,13 +31,13 @@ You can also specify the three individual steps by replacing the `–autorecon-a
 
 7.  Visualise output using a command like
 
-```
+```bash
 tksurfer 001 lh pial
 ```
 
 or
 
-```
+```bash
 tksurfer 001 lh inflated
 ```
 

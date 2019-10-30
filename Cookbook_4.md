@@ -10,7 +10,7 @@ When making overlays in Freesurfer you need to have a file called ‘register.da
 
 Get an idea of what is going on by issuing the command
 
-```
+```bash
 tkregister2 --help
 ```
 
@@ -18,7 +18,7 @@ In general, the response of the command line tools to `-- help` is very impressi
 
 Get your SPM data (for example, some meridians – or perhaps an experiment) and identify the image you are going to want to overlay. This might be an SPM{t}, or a con.img, or something else. Now use tkregister2 to make a register.dat file
 
-```
+```bash
 tkregister2 --mov /usr/local/freesurfer/subjects/meridian_tmp/meridianStats/spmT_0003.img \
 						--s 001 --regheader --noedit --reg register.dat
 ```
@@ -27,13 +27,13 @@ In this example, the first long path is to the stats image I want to overlay; th
 
 Now you can overlay the stats image, either on the volume
 
-```
+```bash
 tkmedit 001 T1.mgz -aparc+aseg -overlay /usr/local/freesurfer/subjects/meridian_tmp/meridianStats/spmT_0003.img.
 ```
 
 or on the inflated volume:
 
-```
+```bash
 tksurfer 001 lh inflated -overlay /usr/local/freesurfer/subjects/meridian_tmp/meridianStats/spmT_0003.img
 ```
 
@@ -41,7 +41,7 @@ Again, replace subject numbers (‘001’) and path to the stats image as approp
 
 You can also interactively do this from the tksurfer menu e.g.
 
-```
+```bash
 tksurfer 001 lh inflated
 ```
 
@@ -55,7 +55,7 @@ If you want to make an SPM overlay of normalised data, then you’re going to wa
 
 You don’t really need the whole package – or at least we didn’t. What you need is the ‘SPM Canonical Brain Surface’ from the [downloads page](http://spmsurfrend.sourceforge.net/Downloads/Downloads.html). If you make a new subject directory in `/usr/local/Freesurfer/subjects` then you can use `tksurfer` to look at this e.g.
 
-```
+```bash
 tksurfer canonical lh pial
 ```
 

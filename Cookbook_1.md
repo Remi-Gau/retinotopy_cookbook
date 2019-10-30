@@ -1,9 +1,5 @@
 # Freesurfer Cookbook 1 – Installing Freesurfer for SPM & retinotopy
 
-Version 1.0, March 2008
-
-Geraint Rees (g.rees@fil.ion.ucl.ac.uk)
-
 This tutorial assumes familiarity with the command line and with basic Unix shell commands and directory trees. If you don’t know about the C shell then a basic tutorial is available [here](LINK MISSING). But you really don’t need to read much of that to get going.
 
 ## For Macintosh

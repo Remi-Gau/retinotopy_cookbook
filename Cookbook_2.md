@@ -1,9 +1,5 @@
 # Freesurfer Cookbook 2 – basic reconstruction
 
-Version 1.0, March 2008
-
-Geraint Rees (g.rees@fil.ion.ucl.ac.uk)
-
 This cookbook assumes you have installed Freesurfer. If you haven’t, follow [cookbook 1](Cookbook_1.md)! You will need a structural image to do this part.
 
 1.  In the `/subjects` directory of Freesurfer, create a directory for your new subject (for this example, let’s assume it’s named `001`) and a subdirectory `/mri`. Put the T1-weighted anatomical in there.
